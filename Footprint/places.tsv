@@ -1,0 +1,57 @@
+0	42.239779,-71.812493	Gate (Lower)	1	6	21						
+1	42.238934,-71.811948	Gate (Front)	0	1	4						
+2	42.236776,-71.810051	Field House	13	27							
+3	42.238472,-71.810967	Haberlin (Front)	1	10							
+4	42.238977,-71.810675	Guard Shack	1	5	9	10					
+5	42.239605,-71.811584	Tennis Court \u{e015}	4	6							
+6	42.240505,-71.811196	Fitton Baseball Field \u{e016}	0	5	7						
+7	42.241565,-71.809904	Fitton Football Field \u{e42b}	6	21							
+8	42.239782,-71.809676	Stein (First Floor) \u{1F4DA}	9	19	21						
+9	42.239102,-71.809730	Stein (Front)	4	8	5	16	17	18	19		
+10	42.238545,-71.810316	Science Courtyard \u{1F52C}	1	3	4	15					
+11	42.237625,-71.809466	Wheeler (West)	13	14							
+12	42.236497,-71.808776	Ciampi Hall	27								
+13	42.237556,-71.810118	Wheeler (East)	2	11	14	26					
+14	42.238159,-71.809870	Smith Labs (Top) \u{2697}	11	13	15	16					
+15	42.238463,-71.809717	Beaven Hall	9	10	14	16					
+16	42.238375,-71.809187	Dinand Library (Front) \u{1F4DA}	9	14	15	17	25				
+17	42.238894,-71.808817	O'Kane Hall (Front)	9	16	18						
+18	42.239291,-71.808751	Public Safety \u{e152}	9	17	19	23					
+19	42.239602,-71.808791	Carlin Hall (Bridge/Side)	8	9	18	20					
+20	42.239829,-71.808750	Carlin Hall (Front)	19	21	22	23	32				
+21	42.240594,-71.809437	Parking Garage \u{1F697}	7	8	20	22					
+22	42.240091,-71.808092	Kimball (Front) \u{1F35D}	20	21	23	32	33				
+23	42.239311,-71.807989	Fenwick Hall (Front/Admissions)	18	20	22	31	32	35	36	56	
+24	42.238807,-71.808478	O'Kane Hall (Back) \u{1F4D6}	25	26	31						
+25	42.238182,-71.808813	Dinand Library (Side) \u{1F4D6}	16	24	26	30	31				
+26	42.237712,-71.808441	Hogan Student Center (Front)	13	24	25	27	28	30			
+27	42.237355,-71.808153	Hogan Student Center (3rd Floor)	2	12	26	28	54				
+28	42.237720,-71.807806	Hogan Student Center (Easy Street Entrance)	26	27	29						
+29	42.237808,-71.807361	Healy Hall (Front)	28	30	37	38					
+30	42.238347,-71.807919	Healy Hall (Back)	25	26	29	31	36	37	38		
+31	42.238640,-71.807911	Smith Hall \u{1F4DA}	23	24	25	30	36	37			
+32	42.239902,-71.807349	Alumni Hall (Front)	20	22	23	33	34				
+33	42.240208,-71.807692	Kimball (Side)/Seelos Theater \u{1F371} \u{1F39F}	22	32	34	45					
+34	42.239817,-71.806155	Williams Hall	32	33	41	44					
+35	42.239404,-71.807151	St. Joseph's Chapel \u{26ea}	23	36	43	56					
+36	42.239217,-71.807350	Music Center \u{1F3B6} \u{1F3BB}	23	30	31	35	37	41	42	43	56
+37	42.238514,-71.807013	Lehy Hall (Back)	29	30	31	38	39	40			
+38	42.237892,-71.806769	Lehy Hall (Front)	29	30	37	39	40				
+39	42.237892,-71.806430	Hanselman Hall (Front)	37	38	40	47	48				
+40	42.238518,-71.806391	Hanselman Hall (Back)	37	38	39	41	47	48			
+41	42.238743,-71.806153	Campion House  \u{1F36A}	34	40	42	43	44				
+42	42.238908,-71.805635	Millard Art Center \u{1F3A8}	36	41	43	46					
+43	42.239222,-71.805655	Health Services/Loyola Hall \u{1F912}	36	41	42	46					
+44	42.239270,-71.805352	Loyola Hall (Gym) \u{1F3FD}	34	41							
+45	42.240699,-71.804736	Softball Field	33								
+46	42.238904,-71.804865	Loyola Hall (Entrance 2)	42	43	47						
+47	42.238315,-71.805436	Clark Hall (Back)	39	40	46	48	49	50			
+48	42.237762,-71.805836	Clark Hall (Front)	39	40	47	49	50				
+49	42.237472,-71.805119	Mulledy Hall (Entrance 1)	47	48	50	52					
+50	42.237774,-71.804791	Mulledy Hall (Back)	47	48	49	51					
+51	42.237416,-71.804524	Mulledy Hall (Common Room)	50								
+52	42.237289,-71.804808	Mulledy Hall (Entrance 2)	49	53							
+53	42.236666,-71.804897	Figge Hall	52								
+54	42.235243,-71.806488	Hart Center (Front) \u{1F3C0} \u{1F3D2}	27	55							
+55	42.234403,-71.806065	Hart Center (Back) \u{1F3D1} \u{26BD}	54								
+56	42.239658,-71.807227	Alumni Hall (Bridge/Side)	23	35	36						
