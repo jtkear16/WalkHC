@@ -44,12 +44,13 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 	}
 	
 	// Picker variables
+	var closestPoint: Int!
 	var currentlocation = PICKERARRAY[0].1
 	var originlocation = PICKERARRAY[0].1
 	var destinationlocation = PICKERARRAY[0].1
-	var lockedOrigin: Int = -1
-	var lockedDest: Int = -1
-	var closestPoint: Int!
+	var lockedOrigin = -1
+	var lockedDest = -1
+	
 	
 	// Picker reaction functions
 	@IBOutlet weak var picker: UIPickerView!
@@ -333,6 +334,8 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 	func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
 		let location: CLLocation = userLocation.location!
 		var min = Double.infinity
+		
+		// Calculate the closest location to the users location
 		for loc in PLACES {
 			let temp = CalculateDistance(location, loc2: loc)
 			if temp < min {
@@ -342,6 +345,10 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 		}
 		print("Your location is \(location)")
 		print("Closest point is \(closestPoint)")
+		
+		// Now set the origin to be the closest location by default so the
+		// next time directions are requested, it's from the current location
+		originlocation = closestPoint
 	}
 	
 	let 𝝿 = 3.14159
@@ -462,6 +469,8 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 		} else {
 			pinView.pinTintColor = UIColor.redColor()
 		}
+
+		// pinView.pinTintColor = UIColor.redColor()
 		
 		// Allow the pin to display its name when it is tapped.
 		pinView.canShowCallout = true
