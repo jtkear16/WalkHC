@@ -48,6 +48,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 	var currentlocation = PICKERARRAY[0].1
 	var originlocation = PICKERARRAY[0].1
 	var destinationlocation = PICKERARRAY[0].1
+	var changedOrigin = false
 	var lockedOrigin = -1
 	var lockedDest = -1
 	
@@ -80,8 +81,10 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 	@IBAction func originButton(sender: AnyObject) {
 		if currentlocation == -1 {
 			originlocation = closestPoint
+			changedOrigin = false
 		} else {
 			originlocation = currentlocation
+			changedOrigin = true
 		}
 		PINBOOL[originlocation] = true;
 		lockedOrigin = originlocation
@@ -162,10 +165,12 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
     
     @IBOutlet weak var pickerVC: UIView!
     
-	// Bottom Circle Button reaction
-	/// Call this to reset the camera.
+	// Top Circle Button reaction
+	// Call this to reset the camera.
 	@IBAction func resetCamera(sender: AnyObject) {
 		visibleMapRegionDelegate.mapViewResetCameraToFloorplan(mapView)
+		originlocation = closestPoint
+		changedOrigin = false
 	}
 	
 	// Bottom Switch Reaction
@@ -333,42 +338,27 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 	/// Respond to CoreLocation updates
 	func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
 		let location: CLLocation = userLocation.location!
-		var min = Double.infinity
+		var min = CLLocationDistanceMax
 		
 		// Calculate the closest location to the users location
 		for loc in PLACES {
-			let temp = CalculateDistance(location, loc2: loc)
+			let tCoord = CLLocation(latitude: loc.coordinates.0, longitude: loc.coordinates.1)
+			let temp = location.distanceFromLocation(tCoord)
 			if temp < min {
 				closestPoint = loc.pointNumber
 				min = temp
 			}
 		}
+		
+		// Debugging Tool
 		print("Your location is \(location)")
 		print("Closest point is \(closestPoint)")
 		
 		// Now set the origin to be the closest location by default so the
 		// next time directions are requested, it's from the current location
-		originlocation = closestPoint
-	}
-	
-	let 𝝿 = 3.14159
-	
-	// Calculates the distance between two geographic points
-	// loc1 - is the users current location
-	// loc2 - is the other location being checked.
-	// http://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude-longitude-points-haversine-formula/27943#27943
-	func CalculateDistance (loc1: CLLocation, loc2:Location) -> Double {
-		let R = 3963.1906 // Radius of the Earth in miles
-		let dLat = (loc2.coordinates.0 - loc1.coordinate.latitude)*𝝿/180
-		let dLon = (loc2.coordinates.1 - loc1.coordinate.longitude)*𝝿/180
-		let lat1 = loc1.coordinate.longitude*𝝿/180
-		let lat2 = loc2.coordinates.0*𝝿/180
-		
-		let a = sin(dLat/2) * sin(dLat/2) + sin(dLon/2) * sin(dLon/2) * cos(lat1) * cos(lat2)
-		let c = 2 * atan2(sqrt(a), sqrt(1-a))
-		let d = R * c // this is in miles
-		
-		return d;
+		if !changedOrigin {
+			originlocation = closestPoint
+		}
 	}
 	
 	/// Request authorization if needed.
