@@ -150,7 +150,9 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 			alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
 			self.presentViewController(alert, animated: true, completion: nil)
 		} else {
-			print("Please select both an origin and destination.")
+			let alert = UIAlertController(title: "Oops!", message: "Please select a destination.", preferredStyle: UIAlertControllerStyle.Alert)
+			alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+			self.presentViewController(alert, animated: true, completion: nil)
 		}
 	}
 	
@@ -371,6 +373,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 			NSLog("Please authorize location services for this app under Settings > Privacy")
 		case CLAuthorizationStatus.AuthorizedAlways, CLAuthorizationStatus.AuthorizedWhenInUse, CLAuthorizationStatus.Restricted:
 			break
+			
 		}
 	}
 	/*******************************************************/
@@ -452,18 +455,22 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 		
 		let pinView = MKPinAnnotationView()
 		
+		// Allow the pin to display its name when it is tapped.
+		pinView.canShowCallout = true
+		
 		// Change the color of the pin depending on its purpose.
 		// Make the "Current Location" pin green, and the rest of the pins red.
 		if (annotation.title! == "Current Location") {
-			pinView.pinTintColor = UIColor.greenColor()
+			// pinView.pinTintColor = UIColor.greenColor()
+			return nil // Default to blue dot
 		} else {
+			pinView.animatesDrop = true
 			pinView.pinTintColor = UIColor.redColor()
 		}
 
 		// pinView.pinTintColor = UIColor.redColor()
 		
-		// Allow the pin to display its name when it is tapped.
-		pinView.canShowCallout = true
+		
 		
 		// Return the pin
 		return pinView
