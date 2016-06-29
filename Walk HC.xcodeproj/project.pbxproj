@@ -10,8 +10,10 @@
 		6B2FDE281CC1722300EF075B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B2FDE271CC1722300EF075B /* Launch Screen.storyboard */; };
 		6B53DDBA1CC6A0BB00603F28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B53DDB91CC6A0BB00603F28 /* Main.storyboard */; };
 		6B53DDBC1CC6A13B00603F28 /* shieldlogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B53DDBB1CC6A13B00603F28 /* shieldlogo.jpg */; };
-		6BA2B0561CD2B89E00E784D7 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BA2B0551CD2B89E00E784D7 /* logo.jpg */; settings = {ASSET_TAGS = (); }; };
-		6BA2B05C1CD2BD2900E784D7 /* shield-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BA2B05B1CD2BD2900E784D7 /* shield-2.jpg */; settings = {ASSET_TAGS = (); }; };
+		6BA2B0561CD2B89E00E784D7 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BA2B0551CD2B89E00E784D7 /* logo.jpg */; };
+		6BBC7D291D23259E0012AF07 /* Primary_rgb_tag.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC7D261D23259E0012AF07 /* Primary_rgb_tag.jpg */; };
+		6BBC7D2B1D23259E0012AF07 /* Shield_watermark_rgb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC7D281D23259E0012AF07 /* Shield_watermark_rgb.jpg */; };
+		6BE1D6081D23F9FD00EC076B /* Shield_rgb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BE1D6071D23F9FD00EC076B /* Shield_rgb.png */; };
 		6BE6301D1CBF24CA00B1378E /* places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE6301C1CBF24C900B1378E /* places.swift */; };
 		A641A13F1B586C6A00B1035B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A641A13E1B586C6A00B1035B /* AppDelegate.swift */; };
 		A641A1411B586C6A00B1035B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A641A1401B586C6A00B1035B /* ViewController.swift */; };
@@ -47,8 +49,11 @@
 		6B2FDE271CC1722300EF075B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		6B53DDB91CC6A0BB00603F28 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6B53DDBB1CC6A13B00603F28 /* shieldlogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shieldlogo.jpg; sourceTree = "<group>"; };
+		6B802C441D232EF300CD59FA /* Shield_rgb.eps */ = {isa = PBXFileReference; lastKnownFileType = file; path = Shield_rgb.eps; sourceTree = "<group>"; };
 		6BA2B0551CD2B89E00E784D7 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
-		6BA2B05B1CD2BD2900E784D7 /* shield-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shield-2.jpg"; sourceTree = "<group>"; };
+		6BBC7D261D23259E0012AF07 /* Primary_rgb_tag.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Primary_rgb_tag.jpg; sourceTree = "<group>"; };
+		6BBC7D281D23259E0012AF07 /* Shield_watermark_rgb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Shield_watermark_rgb.jpg; sourceTree = "<group>"; };
+		6BE1D6071D23F9FD00EC076B /* Shield_rgb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shield_rgb.png; sourceTree = "<group>"; };
 		6BE6301C1CBF24C900B1378E /* places.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = places.swift; sourceTree = "<group>"; };
 		A641A13E1B586C6A00B1035B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A641A1401B586C6A00B1035B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,8 +122,11 @@
 				A641A16C1B586EA000B1035B /* Utilities.swift */,
 				6B53DDB91CC6A0BB00603F28 /* Main.storyboard */,
 				6B2FDE271CC1722300EF075B /* Launch Screen.storyboard */,
+				6BBC7D261D23259E0012AF07 /* Primary_rgb_tag.jpg */,
+				6BBC7D281D23259E0012AF07 /* Shield_watermark_rgb.jpg */,
+				6B802C441D232EF300CD59FA /* Shield_rgb.eps */,
 				6BA2B0551CD2B89E00E784D7 /* logo.jpg */,
-				6BA2B05B1CD2BD2900E784D7 /* shield-2.jpg */,
+				6BE1D6071D23F9FD00EC076B /* Shield_rgb.png */,
 				6B53DDBB1CC6A13B00603F28 /* shieldlogo.jpg */,
 				A641A17A1B58705C00B1035B /* Floorplans */,
 				A641A14A1B586C6A00B1035B /* Info.plist */,
@@ -234,9 +242,11 @@
 			files = (
 				6B53DDBC1CC6A13B00603F28 /* shieldlogo.jpg in Resources */,
 				6B53DDBA1CC6A0BB00603F28 /* Main.storyboard in Resources */,
+				6BE1D6081D23F9FD00EC076B /* Shield_rgb.png in Resources */,
+				6BBC7D291D23259E0012AF07 /* Primary_rgb_tag.jpg in Resources */,
 				C97AF80C1CBECB6000C4B027 /* Images-4.xcassets in Resources */,
-				6BA2B05C1CD2BD2900E784D7 /* shield-2.jpg in Resources */,
 				6BA2B0561CD2B89E00E784D7 /* logo.jpg in Resources */,
+				6BBC7D2B1D23259E0012AF07 /* Shield_watermark_rgb.jpg in Resources */,
 				A641A17B1B58705C00B1035B /* Floorplans in Resources */,
 				6B2FDE281CC1722300EF075B /* Launch Screen.storyboard in Resources */,
 			);
