@@ -211,7 +211,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 		mapView.removeOverlays(mapView.overlays)
 		mapView.removeAnnotations(mapView.annotations)
 		// Show labels for restaurants, schools, etc.
-		mapView.showsPointsOfInterest = true
+		// mapView.showsPointsOfInterest = true
 		// Show building outlines.
 		mapView.showsBuildings = true
 		mapKitTilesetRevealed = true
@@ -461,17 +461,13 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 		// Change the color of the pin depending on its purpose.
 		// Make the "Current Location" pin green, and the rest of the pins red.
 		if (annotation.title! == "Current Location") {
-			// pinView.pinTintColor = UIColor.greenColor()
 			return nil // Default to blue dot
 		} else {
-			pinView.animatesDrop = true
+			// Chose default as red, could be any color
 			pinView.pinTintColor = UIColor.redColor()
 		}
+		pinView.animatesDrop = true
 
-		// pinView.pinTintColor = UIColor.redColor()
-		
-		
-		
 		// Return the pin
 		return pinView
 		
