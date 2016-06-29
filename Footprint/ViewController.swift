@@ -557,7 +557,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 		var i = 0
 		while i < Places.count {
 			Q.insert(i)
-			i++
+			i = i + 1
 		}
 		
 		dist[source] = 0
