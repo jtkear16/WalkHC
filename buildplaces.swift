@@ -161,6 +161,7 @@ for element in Places {
 }
 print("]")
 
+
 // Prints the initialized PINBOOL array to the screen
 print("/*\nThe initial Boolean array that tells the program whether or not to display pins\n*/")
 print("var PINBOOL = [Bool](count: PLACES.count, repeatedValue: false)")
@@ -172,7 +173,9 @@ for element in Places {
 	if temp.removeAtIndex(temp.startIndex) == "1" { continue }
 	NAMEARRAY.append(element.name)
 }
+
 NAMEARRAY = NAMEARRAY.sort()
+
 var NUMBERPARALLEL = [Int]()
 func findCorrespondingNumber(let places: [Location], s:String) -> Int{
 	for element in places {
@@ -186,14 +189,27 @@ for element in NAMEARRAY {
 	NUMBERPARALLEL.append(findCorrespondingNumber(Places, s: element))
 }
 
+var PICKERARRAY: [(String,Int)] = []
+
 print("/*\nTuple array that is used for Picker data\n*/")
 print("let PICKERARRAY = [")
-print("(\"Current Location\", -1),")
 var i = 0
 while i < NAMEARRAY.count {
-	print("(\"\(NAMEARRAY[i])\", \(NUMBERPARALLEL[i])),")
+	let newList = /*try*/ NAMEARRAY[i].characters.split{$0 == "-"}.map(String.init)
+	// For every element in that list, print it, and also NUMBERPARALLEL[i]
+	for item in newList {
+		PICKERARRAY.append((item, NUMBERPARALLEL[i]))
+	}
 	i = i + 1
 }
+
+PICKERARRAY = PICKERARRAY.sort{$0.0 < $1.0}
+PICKERARRAY.insert(("Current Location", -1), atIndex: 0)
+
+for item in PICKERARRAY {
+	print("(\"\(item.0)\", \(item.1)),")
+}
+
 print("]")
 
 

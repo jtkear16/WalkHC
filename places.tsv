@@ -21,7 +21,7 @@
 20	42.239870,-71.808700	Carlin Hall (Front)	19	21	22	32		
 21	42.240594,-71.809437	Parking Garage \u{1F697}	6	8	20			
 22	42.240160,-71.808000	Kimball (Front) \u{1F35D}	20	23	32	33		
-23	42.239323,-71.807947	Fenwick Hall (Front/Admissions)	22	65	66			
+23	42.239323,-71.807947	Fenwick Hall-Admissions Office	22	65	66			
 24	42.238875,-71.808480	O'Kane Hall (Back) \u{1F4D6}	75	76				
 25	42.238182,-71.809050	Dinand Library (Side) \u{1F4D6}	63					
 26	42.237720,-71.808430	Hogan Student Center (Front)	11	27	63	64		
@@ -31,7 +31,7 @@
 30	42.238353,-71.807750	Healy Hall (Back)	31	64	68			
 31	42.238710,-71.807830	Smith Hall \u{1F4DA}	30	68				
 32	42.239940,-71.807330	Alumni Hall (Front)	20	22	33	66		
-33	42.240263,-71.807660	Kimball (Side)/Seelos Theater \u{1F371} \u{1F39F}	22	32	45			
+33	42.240263,-71.807660	Kimball (Lower) \u{1F371}-Seelos Theater \u{1F39F}	22	32	45			
 34	42.239900,-71.806135	Williams Hall	44	56	67			
 35	42.239430,-71.806900	St. Joseph's Chapel \u{26ea}	36	56	66			
 36	42.239270,-71.807280	Music Center \u{1F3B6} \u{1F3BB}	35	66	67	76		
@@ -41,7 +41,7 @@
 40	42.238520,-71.806325	Hanselman Hall (Back)	37	41	47	70		
 41	42.238800,-71.806150	Campion House  \u{1F36A}	40	67				
 42	42.238950,-71.805600	Millard Art Center \u{1F3A8}	43	67	73			
-43	42.239300,-71.805600	Health Services/Loyola Hall \u{1F912}	42	46	67			
+43	42.239300,-71.805600	Health Services \u{1F912}_Loyola Hall	42	46	67			
 44	42.239374,-71.805335	Loyola Hall (Gym) \u{1F3FD}	34					
 45	42.240800,-71.804700	Softball Field	33					
 46	42.239000,-71.804890	Loyola Hall (Entrance 2)	43	73				
@@ -54,7 +54,7 @@
 53	42.236650,-71.804830	Figge Hall	74					
 54	42.235240,-71.806550	Hart Center (Front) \u{1F3C0} \u{1F3D2}	27	55				
 55	42.234350,-71.806065	Hart Center (Back) \u{1F3D1} \u{26BD}	54					
-56	42.239658,-71.807190	Alumni Hall (Bridge/Side)	34	35	66			
+56	42.239658,-71.807190	Alumni Hall (Bridge)	34	35	66			
 57	42.238200,-71.809500	100	11	14	15	16		
 58	42.238650,-71.809970	101	10	59	77			
 59	42.239070,-71.810030	102	4	9	58	60		

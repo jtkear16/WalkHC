@@ -60,7 +60,7 @@ class VisibleMapRegionDelegate: NSObject {
         - parameter mapView: MKMapView upon which we reset.
     */
     func mapViewResetCameraToFloorplan(mapView: MKMapView) {
-		let span = MKCoordinateSpanMake(0.013, 0.013)
+		let span = MKCoordinateSpanMake(0.015, 0.015)
 		let coordinate = CLLocationCoordinate2DMake(42.236900, -71.808550)
 		let region = MKCoordinateRegionMake(coordinate, span)
 		mapView.setRegion(region, animated: true)

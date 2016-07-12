@@ -95,7 +95,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 		}
         resetLines()
 		resetPins()
-		print("This is the origin \(originlocation)")
+		// print("This is the origin \(originlocation)")
 	}
 	
 	// Destination button reaction
@@ -114,7 +114,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 		}
         resetLines()    
 		resetPins()
-		print("This is the destination \(destinationlocation)")
+		// print("This is the destination \(destinationlocation)")
 	}
 	
 	// Calculate route reaction
@@ -150,7 +150,9 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 			alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
 			self.presentViewController(alert, animated: true, completion: nil)
 		} else {
-			print("Please select both an origin and destination.")
+			let alert = UIAlertController(title: "Oops!", message: "We had some trouble.\n Please make sure you have an origin and destination and try again.", preferredStyle: UIAlertControllerStyle.Alert)
+			alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+			self.presentViewController(alert, animated: true, completion: nil)
 		}
 	}
 	
@@ -209,7 +211,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 		mapView.removeOverlays(mapView.overlays)
 		mapView.removeAnnotations(mapView.annotations)
 		// Show labels for restaurants, schools, etc.
-		mapView.showsPointsOfInterest = true
+		// mapView.showsPointsOfInterest = true
 		// Show building outlines.
 		mapView.showsBuildings = true
 		mapKitTilesetRevealed = true
@@ -273,7 +275,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
         
         pickerVC.hidden = true
 		
-		let span = MKCoordinateSpanMake(0.013, 0.013)
+		let span = MKCoordinateSpanMake(0.015, 0.015)
 		let coordinate = CLLocationCoordinate2DMake(42.236900, -71.808550)
 		let region = MKCoordinateRegionMake(coordinate, span)
 		
@@ -330,8 +332,13 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 		In production, you'll want to comment this out.
 		*/
 		debuggingAnnotations = ViewController.createDebuggingAnnotationsForMapView(mapView!, aboutFloorplan: hcmap)
+	
+		// TODO:
+		// Recenter??
+		
 		
 	}
+	
 	
 	// LOCATION STUFF
 	/*******************************************************/
@@ -351,7 +358,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 		}
 		
 		// Debugging Tool
-		print("Your location is \(location)")
+		// print("Your location is \(location)")
 		print("Closest point is \(closestPoint)")
 		
 		// Now set the origin to be the closest location by default so the
@@ -371,6 +378,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 			NSLog("Please authorize location services for this app under Settings > Privacy")
 		case CLAuthorizationStatus.AuthorizedAlways, CLAuthorizationStatus.AuthorizedWhenInUse, CLAuthorizationStatus.Restricted:
 			break
+			
 		}
 	}
 	/*******************************************************/
@@ -452,19 +460,18 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 		
 		let pinView = MKPinAnnotationView()
 		
-		// Change the color of the pin depending on its purpose.
-		// Make the "Current Location" pin green, and the rest of the pins red.
-		if (annotation.title! == "Current Location") {
-			pinView.pinTintColor = UIColor.greenColor()
-		} else {
-			pinView.pinTintColor = UIColor.redColor()
-		}
-
-		// pinView.pinTintColor = UIColor.redColor()
-		
 		// Allow the pin to display its name when it is tapped.
 		pinView.canShowCallout = true
 		
+		// Change the color of the pin depending on its purpose.
+		// Make the "Current Location" pin green, and the rest of the pins red.
+		if (annotation.title! == "Current Location") {
+			return nil // Default to blue dot
+		} else {
+			// Chose default as red, could be any color
+			pinView.pinTintColor = UIColor.redColor()
+		}
+
 		// Return the pin
 		return pinView
 		
