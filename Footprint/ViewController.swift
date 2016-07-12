@@ -150,7 +150,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 			alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
 			self.presentViewController(alert, animated: true, completion: nil)
 		} else {
-			let alert = UIAlertController(title: "Oops!", message: "Please select a destination.", preferredStyle: UIAlertControllerStyle.Alert)
+			let alert = UIAlertController(title: "Oops!", message: "We had some trouble.\n Please make sure you have an origin and destination and try again.", preferredStyle: UIAlertControllerStyle.Alert)
 			alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
 			self.presentViewController(alert, animated: true, completion: nil)
 		}
