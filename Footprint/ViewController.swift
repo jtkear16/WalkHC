@@ -95,7 +95,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 		}
         resetLines()
 		resetPins()
-		print("This is the origin \(originlocation)")
+		// print("This is the origin \(originlocation)")
 	}
 	
 	// Destination button reaction
@@ -114,7 +114,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 		}
         resetLines()    
 		resetPins()
-		print("This is the destination \(destinationlocation)")
+		// print("This is the destination \(destinationlocation)")
 	}
 	
 	// Calculate route reaction
@@ -275,7 +275,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
         
         pickerVC.hidden = true
 		
-		let span = MKCoordinateSpanMake(0.013, 0.013)
+		let span = MKCoordinateSpanMake(0.015, 0.015)
 		let coordinate = CLLocationCoordinate2DMake(42.236900, -71.808550)
 		let region = MKCoordinateRegionMake(coordinate, span)
 		
@@ -332,8 +332,13 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 		In production, you'll want to comment this out.
 		*/
 		debuggingAnnotations = ViewController.createDebuggingAnnotationsForMapView(mapView!, aboutFloorplan: hcmap)
+	
+		// TODO:
+		// Recenter??
+		
 		
 	}
+	
 	
 	// LOCATION STUFF
 	/*******************************************************/
@@ -353,7 +358,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 		}
 		
 		// Debugging Tool
-		print("Your location is \(location)")
+		// print("Your location is \(location)")
 		print("Closest point is \(closestPoint)")
 		
 		// Now set the origin to be the closest location by default so the
@@ -466,7 +471,6 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 			// Chose default as red, could be any color
 			pinView.pinTintColor = UIColor.redColor()
 		}
-		pinView.animatesDrop = true
 
 		// Return the pin
 		return pinView
