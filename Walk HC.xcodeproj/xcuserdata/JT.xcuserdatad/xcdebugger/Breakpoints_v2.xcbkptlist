@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Footprint/ViewController.swift"
-            timestampString = "489594690.551029"
+            timestampString = "491237679.914585"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "291"
-            endingLineNumber = "291"
+            startingLineNumber = "313"
+            endingLineNumber = "313"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>

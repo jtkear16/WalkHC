@@ -131,14 +131,14 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 			resetPins()
 			
 			// Current location name stuff
-			var travelmsg:String = "You are going from: "
+			var travelmsg:String = "From: "
 			var temp = PLACES[originlocation].name
 			if temp.removeAtIndex(temp.startIndex) == "1" {
 				travelmsg = travelmsg + "Current location"
 			} else {
 				travelmsg = travelmsg + PLACES[originlocation].name
 			}
-			travelmsg = travelmsg + " -> "
+			travelmsg = travelmsg + "\nTo: "
 			temp = PLACES[destinationlocation].name
 			if temp.removeAtIndex(temp.startIndex) == "1" {
 				travelmsg = travelmsg + "Current location"
@@ -146,7 +146,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 				travelmsg = travelmsg + PLACES[destinationlocation].name
 			}
 			
-			let alert = UIAlertController(title: "You are going from:", message: travelmsg, preferredStyle: UIAlertControllerStyle.Alert)
+			let alert = UIAlertController(title: "Directions", message: travelmsg, preferredStyle: UIAlertControllerStyle.Alert)
 			alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
 			self.presentViewController(alert, animated: true, completion: nil)
 		} else {
@@ -163,8 +163,14 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
     @IBAction func doneButton(sender: AnyObject) {
         pickerVC.hidden = true
     }
-    
-    
+	
+	@IBAction func helpButton(sender: AnyObject) {
+		let helpMessage = "How to get directions:\n1. Tap \'Places\' button.\t\t\t\n2. Scroll and select \'Origin\'.\t\t\n3. Scroll and select \'Destination\'.\n4. Tap \'Route\'.\t\t\t\t"
+		let alert = UIAlertController(title: "Help", message: helpMessage, preferredStyle: UIAlertControllerStyle.Alert)
+		alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+		self.presentViewController(alert, animated: true, completion: nil)
+	}
+	
     @IBOutlet weak var pickerVC: UIView!
     
 	// Top Circle Button reaction
@@ -513,6 +519,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate,
 				let tempCoord = MKPointAnnotation()
 				tempCoord.title = element.name
 				tempCoord.coordinate = CLLocationCoordinate2DMake(element.coordinates.0, element.coordinates.1)
+				// Something to get more information about a building
 				returnArray.append(tempCoord)
 			}
 		}

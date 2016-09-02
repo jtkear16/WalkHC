@@ -59,6 +59,12 @@
                                                 <action selector="resetCamera:" destination="BYZ-38-t0r" id="3gk-KW-1TD"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="?" id="tDa-tY-cCh">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="helpButton:" destination="BYZ-38-t0r" id="T4R-VC-UHM"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
